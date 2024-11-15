@@ -24,20 +24,9 @@
 <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('bootstrap/css/bootstrap.css') }}" rel="stylesheet">
 
-
-
-  <!-- Main CSS File -->
-  <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: eStartup
-  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<!-- Main CSS File -->
+<link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -51,14 +40,14 @@
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">Tentang</a></li>
-          <li><a href="#services">Facility</a><li>
+          <li><a href="#services">Facility</a></li>
           <li><a href="#contact">Kontak</a></li>
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="https://sim.iqis.sch.id/tkit/ppdb" target="_blank">PPDB TK</a></li>
-              <li><a href="https://sim.iqis.sch.id/sdit/ppdb" target="_blank">PPDB SD</a></li>
-              <li><a href="https://sim.iqis.sch.id/smpit/ppdb" target="_blank">PPDB SMP</a></li>
-              <li><a href="https://sim.iqis.sch.id/smkit/ppdb" target="_blank">PPDB SMK</a></li>
+              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB TK</a></li>
+              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SD</a></li>
+              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SMP</a></li>
+              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SMK</a></li>
             </ul>
             
           </li>
@@ -71,7 +60,7 @@
 
   <main class="main">
     <!-- Hero Section -->
-    <section id="hero" class="hero section" style="background-image: url('assets/img/background.jpeg'); background-repeat:no-repeat; background-size: cover; background-position:top; height: 750px;position: relative;  padding-top: 0; margin-top: -90px;">
+    <section id="hero" class="hero section" style="background-image: url('storage/{{$setting->hero_bg}}'); background-repeat:no-repeat; background-size: cover; background-position:top; height: 750px;position: relative;  padding-top: 0; margin-top: -90px;">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5">
@@ -80,15 +69,15 @@
             <p class="text-start">Sekolah Islam Ibnul Qayyim Mendidik Generasi Qurani dengan
               Akhlak Mulia</p>
             <div class="get-started d-flex mt-3">
-              <a href="#about" class="btn-get-started">Get Started</a>
-              <a href="assets/img/ClipDown.App_AQOWkGHwiFXRFs7EwwfScJI-74fOry_dVDDAPehBp5mUmFYpBnahRB93LsuquxQdX5PEXAwRsNZQRIgjbcXojB_A.mp4"
+              <a href="#about" class="btn-get-started">About Us</a>
+              <a href="{{$setting->link_video}}"
                 class="glightbox btn-watch-video d-flex align-items-center ms-3"><i
                   class="bi bi-play-circle"></i><span>Watch
                   Video</span></a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/iqis.png" class="img-hero" alt="">
+            <img src="{{asset('storage/'.$setting->hero_grafis)}}" class="img-hero" alt="">
           </div>
         </div>
       </div>
@@ -102,7 +91,7 @@
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <a href="https://www.instagram.com/tkitibnulqayyim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                <a href="{{ $service->tkit }}"
                   target="_blank" class="stretched-link">
                   <img src="assets/img/LOGO IQIS TKIT.png" alt="School Logo" width="150" height="150">
                   <h4 class="title">TKIT</h4>
@@ -112,7 +101,7 @@
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <a href="https://www.instagram.com/sditibnulqayyim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                <a href="{{ $service->sdit }}"
                   target="_blank" class="stretched-link">
                   <img src="assets/img/LOGO IQIS SDIT.png" alt="School Logo" width="150" height="150">
                   <h4 class="title">SDIT</h4>
@@ -122,7 +111,7 @@
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <a href="https://www.instagram.com/smpit.ibnulqayyim_makassar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                <a href="{{ $service->smpit }}"
                   target="_blank" class="stretched-link">
                   <img src="assets/img/LOGO IQIS SMPIT.png" alt="School Logo" width="150" height="150">
                   <h4 class="title">SMPIT</h4>
@@ -132,7 +121,7 @@
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <a href="https://www.instagram.com/smkitibnulqayyim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                <a href="{{ $service->smkit }}"
                   target="_blank" class="stretched-link">
                   <img src="assets/img/LOGO IQIS SMKIT2.png" alt="School Logo" width="150" height="150">
                   <h4 class="title">SMKIT</h4>
@@ -150,66 +139,65 @@
       <div class="container">
 
         <div class="row gy-4">
-      
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-sm-6 content" data-aos="fade-up" data-aos-delay="100">
             <p class="who-we-are">About</p>
             <h3>Cari Tahu Tentang Kami</h3>
             <p class="fst-italic">
-              Mencetak Generasi Muslim yang Shalih, Hafizh dan Terampil
+              {!! $about->description !!}
             </p>
-            <ul>
-              <h4>Visi</h4>
-              <p>
-                Terwujudnya lembaga pendidikan Islam yang berkualitas dan berbasis pada pemahaman Ahlussunnah wal
-                Jama'ah
-                dengan penguasaan hafalan Al-Quran, ilmu syar’iyah dan didukung dengan penguasaan bahasa Arab Dan
-                English
-              </p>
+
+          </div>
+          <div class="col-sm-6 pt-5">
+            <h3 class="fst-italic fw-bold mb-4">
+              Visi Dan Misi
+            </h3>
+            <h4>Visi</h4>
+              <p class="text-center"> {!! $visi->description !!} </p>
               <h4>Misi</h4>
-              <p>
-                Mengembangkan lembaga pendidikan dengan pelayanan berkualitas, berstandar mutu dengan menajemen
-                profesional di dukung oleh ketersediaan guru berkualitas, kurikulum yang memenuhi kebutuhan peserta
-                didik dengan memperhatikan keterlibatan program ekstrakurikuler.
-              </p>
-              <p>
-                Mengembangkan pendidikan yang berbasis bahasa Arab Dan English didukung dengan kekuatan penguasaan
-                bidang Matematika, Sains, dan Wirausaha dengan memanfaatkan teknologi modern dan didasarkan pada
-                kekuatan aqidah, akhlaq dan manhaj agama salafus sholeh
-              </p>
-            </ul>
-                </section><!-- /About Section -->
-            <section id="counts" class="counts">
-              <div class="aos-init aos-animate" data-aos="fade-up">
-        
-                <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                    <div class="count-box">
-                      <i class="bi bi-emoji-smile"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="737" data-purecounter-duration="1" class="purecounter">737</span>
-                      <p>Siswa</p>
-                    </div>
-                  </div>
-        
-                  <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-                    <div class="count-box">
-                      <i class="bi bi-journal-richtext"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="101" data-purecounter-duration="1" class="purecounter">101</span>
-                      <p>Guru & Pegawai</p>
-                    </div>
-                  </div>
-        
-                  <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-                    <div class="count-box">
-                      <i class="bi bi-people"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter">5</span>
-                      <p>Sekolah</p>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-            </section>
-    
+              @foreach ($misi as $item)
+              <p> {!! $item->description !!} </p>
+              @endforeach
+          </div>
+
+        </div>
+      </div>     
+    </section>
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-12 col-md-6">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Siswa</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 col-md-6 mt-5 mt-md-0">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Guru Dan Pegawai</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Sekolah</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
 
 
     <!-- Services Section -->
@@ -383,7 +371,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>Ibnul Qayyim Islamic School (IQIS, Jl. Taman Bunga Sudiang No.2, Laikang, Biringkanaya, Makassar City, South Sulawesi 90242)</p>
+                <p> {{$setting->address}} </p>
               </div>
             </div><!-- End Info Item -->
 
@@ -391,7 +379,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>08000000000</p>
+                <p> {{$setting->phone}} </p>
               </div>
             </div><!-- End Info Item -->
 
@@ -399,45 +387,15 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@iqis.sch.id</p>
+                <p> {{$setting->email}} </p>
               </div>
             </div><!-- End Info Item -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0658900460367!2d119.52621370821224!3d-5.093048894862525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb98cf06e587%3A0xe048f9722d2bde85!2sSDIT%20Ibnul%20Qayyim%20Makassar!5e0!3m2!1sen!2sid!4v1702006211798!5m2!1sen!2sid" frameborder="0" style="border: 0; width: 100%; height: 290px" allowfullscreen=""></iframe>
           </div>
 
           <div class="col-lg-8">
-            <form action="" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
+            {!! $setting->maps !!}
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-                
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-                
-
-              </div>
-            </form>
           </div><!-- End Contact Form -->
 
         </div>
@@ -456,19 +414,15 @@
         </p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://t.me/iqismakassar" target="_blank">
+        <a href="{{$setting->telegram}}" target="_blank">
           <i class="bi bi-telegram"></i>
         </a>
-        <a href="https://www.facebook.com/ibnulqayyim.sch.id?mibextid=JRoKGi"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/iqismakassar/"><i class="bi bi-instagram"></i></a>
-        <a href="www.youtube.com/@IQISTV"><i class="bi bi-youtube"></i></a>
+        <a href="{{$setting->facebook}}"><i class="bi bi-facebook"></i></a>
+        <a href="{{$setting->instagram}}"><i class="bi bi-instagram"></i></a>
+        <a href="{{$setting->youtube}}"><i class="bi bi-youtube"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">SIM-IQIS</a>
+        Designed by <a href="https://iqis.sch.id/">SIM-IQIS</a>
       </div>
     </div>
 
@@ -482,14 +436,23 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{asset('assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
 
   <!-- Main JS File -->
-  <script src="{{ ('assets/js/main.js') }}"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script>
+      // Inisialisasi AOS
+      AOS.init({
+        duration: 1200, // Durasi animasi
+        easing: 'ease-in-out', // Jenis easing
+        once: true, // Animasi hanya diputar sekali
+      });
 
+      const counters = new PureCounter();
+    </script>
 </body>
-
 </html>
