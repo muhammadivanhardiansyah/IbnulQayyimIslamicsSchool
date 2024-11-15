@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>SIM-IQIS</title>
+  <title>{{$title}}</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/LOGO IQIS YAYASAN.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href=" {{ asset('storage/'.$setting->favicon) }} " rel="icon">
+  <link href=" {{ asset('storage/'.$setting->favicon) }} " rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,7 +26,7 @@
 <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 
 <!-- Main CSS File -->
-<link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/main.css?v.2') }}" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -65,9 +65,8 @@
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" style="margin-top: 50px;">
-            <h3 class="text-start mb-3">Ibnul Qayyim Islamic School</h3>
-            <p class="text-start">Sekolah Islam Ibnul Qayyim Mendidik Generasi Qurani dengan
-              Akhlak Mulia</p>
+            <h3 class="text-start mb-3"> {{ $setting->hero_heading }} </h3>
+            <p class="text-start"> {{$setting->hero_text}} </p>
             <div class="get-started d-flex mt-3">
               <a href="#about" class="btn-get-started">About Us</a>
               <a href="{{$setting->link_video}}"
@@ -242,55 +241,22 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="content px-xl-5">
-              <h3><span>Pertanyaan yang sering</span><strong> di ajukan</strong></h3>
+              <h3><span>Pertanyaan yang sering</span><strong> diajukan</strong></h3>
             </div>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
+            @foreach ($faqs as $faq)
             <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>Apa itu Ibnul Qayyim islamic school?</span></h3>
+              <div class="faq-item @if($loop->iteration == 1)faq-active @endif">
+                <h3><span class="num">{{$loop->iteration}}.</span> <span> {{$faq->question}} </span></h3>
                 <div class="faq-content">
-                  <p>Ibnul Qayyim Islamic School adalah sekolah berbasis Islam yang mengikuti prinsip Ahlussunnah Wal Jamaah dan menyediakan pendidikan formal dari tingkat TK (Taman Kanak-Kanak) hingga SMK (Sekolah Menengah Kejuruan).</p>
+                  <p>{{$faq->answer}}</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span> Apa saja jenjang pendidikan yang tersedia di Ibnul Qayyim Islamic School?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Kami menyediakan jenjang pendidikan lengkap mulai dari TK, SD, SMP, hingga SMK. Setiap jenjang memiliki kurikulum yang terintegrasi dengan nilai-nilai Islam dan kompetensi akademik.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span> Di mana lokasi Ibnul Qayyim Islamic School?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Alamat lengkap dan peta lokasi sekolah kami dapat ditemukan pada halaman Kontak di website kami.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span>Apa saja kegiatan ekstrakurikuler yang tersedia?</span>
-                </h3>
-                <div class="faq-content">
-                  <p>Kami menyediakan berbagai kegiatan ekstrakurikuler untuk mengembangkan minat dan bakat siswa, seperti tahfiz Al-Qur'an, bahasa Arab, olahraga, seni, pramuka, dan kegiatan lain yang mendukung perkembangan potensi siswa.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Bagaimana cara menghubungi pihak sekolah untuk informasi lebih lanjut?</span></h3>
-                <div class="faq-content">
-                  <p>Anda dapat menghubungi kami melalui informasi kontak yang tersedia di halaman Kontak di website ini. Kami juga tersedia melalui media sosial yang tercantum. </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              @endforeach
 
             </div>
 

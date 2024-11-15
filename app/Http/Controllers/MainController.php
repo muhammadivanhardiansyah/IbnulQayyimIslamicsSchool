@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Facility;
+use App\Models\Faq;
 use App\Models\LinkService;
 use App\Models\Setting;
 use Illuminate\Contracts\View\View;
@@ -21,6 +22,7 @@ class MainController extends Controller
             'visi'      => About::select('jenis', 'description')->where('jenis', 'Visi')->first(),
             'misi'      => About::select('jenis', 'description')->where('jenis', 'Misi')->get(),
             'facility'  => Facility::select('icon', 'title', 'text')->get(),
+            'faqs'      => Faq::select('question', 'answer')->get(),
         ];
         return view('index', $data);
     }
