@@ -214,71 +214,19 @@
 
         <div class="row gy-4">
 
+          @foreach ($facility as $fac)
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <div class="icon">
-                <i class="bi bi-buildings"></i>
+                {!! $fac->icon !!}
               </div>
-                <h3>Gedung Dan Halaman Sekolah</h3>
+                <h3> {{$fac->title}} </h3>
               </a>
-              <p>Terdapat Gedung Dan Halaman Sekolah yang luas, bersih, dan asri.</p>
+              <p> {{$fac->text}} </p>
             </div>
           </div><!-- End Service Item -->
+          @endforeach
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-building-check"></i>
-              </div>
-                <h3>Ruang Kelas Yang Nyaman</h3>
-              </a>
-              <p>Ruang Kelas Yang Nyaman akan membuat siswa lebih betah untuk belajar.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-mortarboard"></i>
-              </div>
-                <h3>Tenaga Profesional</h3>
-              </a>
-              <p>Kami menhadirkan tenaga yang ahli dibidang nya. untuk menghasilkan kualitas belajar mengajar lebih baik.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-shop"></i>
-              </div>
-                <h3>Kantin Bersih</h3>
-              </a>
-              <p>Kesehatan lingkungan sangat berpengaruh, termasuk Fasilitas kantin sekolah juga hari tetap terjaga kebersihan nya.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-thermometer-snow"></i>
-              </div>
-                <h3>Laboratorium</h3>
-              </a>
-              <p>Laboratorium lengkap, agar siswa dapat berkreasi dan berinovasi dengan bebas</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-shield-check"></i>
-              </div>
-                <h3>Keamanan</h3>
-              </a>
-              <p>Keamanan 24 jam, untuk menjamin keselamatan siswa saat berada dilingkungan sekolah</p>
-            </div>
-          </div><!-- End Service Item -->
         </div>
       </div>
 
