@@ -44,10 +44,10 @@
           <li><a href="#contact">Kontak</a></li>
           <li class="dropdown"><a href="#"><span>PPDB</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB TK</a></li>
-              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SD</a></li>
-              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SMP</a></li>
-              <li><a href="https://sim.iqis.sch.id/form" target="_blank">PPDB SMK</a></li>
+              <li><a href="https://sim.iqis.sch.id/tkit/ppdb" target="_blank">PPDB TK</a></li>
+              <li><a href="https://sim.iqis.sch.id/sdit/ppdb" target="_blank">PPDB SD</a></li>
+              <li><a href="https://sim.iqis.sch.id/smpit/ppdb" target="_blank">PPDB SMP</a></li>
+              <li><a href="https://sim.iqis.sch.id/smkit/ppdb" target="_blank">PPDB SMK</a></li>
             </ul>
             
           </li>
@@ -172,7 +172,7 @@
           <div class="col-lg-4 col-12 col-md-6">
             <div class="count-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_students}}" data-purecounter-duration="2" class="purecounter"></span>
               <p>Siswa</p>
             </div>
           </div>
@@ -180,7 +180,7 @@
           <div class="col-lg-4 col-12 col-md-6 mt-5 mt-md-0">
             <div class="count-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_teachers}}" data-purecounter-duration="2" class="purecounter"></span>
               <p>Guru Dan Pegawai</p>
             </div>
           </div>
@@ -188,7 +188,7 @@
           <div class="col-lg-4 col-12 col-md-6 mt-5 mt-lg-0">
             <div class="count-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_schools}}" data-purecounter-duration="2" class="purecounter"></span>
               <p>Sekolah</p>
             </div>
           </div>
