@@ -42,6 +42,7 @@ class MainController extends Controller
                 $count_schools = $apiData['data']['count_schools'] ?? 0;
 
             } else {
+                //Keluarkan angka nol, jika kosong
                 $count_students = 0;
                 $count_teachers = 0;
                 $count_schools = 0;

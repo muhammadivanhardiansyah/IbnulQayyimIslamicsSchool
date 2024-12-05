@@ -172,7 +172,8 @@
           <div class="col-lg-4 col-12 col-md-6">
             <div class="count-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="{{$count_students}}" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_students}}" data-purecounter-duration="2" class="purecounter">
+              </span>
               <p>Siswa</p>
             </div>
           </div>
@@ -180,7 +181,8 @@
           <div class="col-lg-4 col-12 col-md-6 mt-5 mt-md-0">
             <div class="count-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="{{$count_teachers}}" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_teachers}}" data-purecounter-duration="2" class="purecounter">
+              </span>
               <p>Guru Dan Pegawai</p>
             </div>
           </div>
@@ -188,7 +190,8 @@
           <div class="col-lg-4 col-12 col-md-6 mt-5 mt-lg-0">
             <div class="count-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="{{$count_schools}}" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$count_schools}}" data-purecounter-duration="2" class="purecounter">
+              </span>
               <p>Sekolah</p>
             </div>
           </div>
